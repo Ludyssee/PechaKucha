@@ -18,6 +18,25 @@
 	cursor: pointer;
 }
 
+#img-timer[data-progress="25"] {
+	border-top-color: rgba(0,183,229,0.9);
+}
+
+#img-timer[data-progress="50"] {
+	border-top-color: rgba(0,183,229,0.9);
+	border-right-color: rgba(0,183,229,0.9);
+}
+
+#img-timer[data-progress="75"] {
+	border-top-color: rgba(0,183,229,0.9);
+	border-right-color: rgba(0,183,229,0.9);
+	border-bottom-color: rgba(0,183,229,0.9);
+}
+
+#img-timer[data-progress="100"] {
+	border-color: rgba(0,183,229,0.9);
+}
+
 #img-timer:hover {
 	box-shadow: 0 0 40px #1d6bb4;
 }
@@ -27,6 +46,9 @@
 	vertical-align: middle;
 	text-align: center;
 	transform: rotate(-45deg);
+	color: #00b7e5;
+	font-weight: bold;
+	font-family: sans-serif;
 }
 
 #img-timer.play-btn > span {

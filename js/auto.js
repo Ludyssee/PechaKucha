@@ -41,21 +41,8 @@
 		timer = setInterval(function(){
 			time++;
 			nodes.timer.childNodes[0].innerHTML = time;
-
-			if(time / 5 < 1){
-				nodes.timer.style.borderColor = 'transparent';
-			}
-			if(time / 5 == 1){
-				nodes.timer.style.borderTopColor = 'rgba(0,183,229,0.9)';
-			}
-			if(time / 5 == 2){
-				nodes.timer.style.borderRightColor = 'rgba(0,183,229,0.9)';
-			}
-			if(time / 5 == 3){
-				nodes.timer.style.borderBottomColor = 'rgba(0,183,229,0.9)';
-			}
-			if(time / 5 == 4){
-				nodes.timer.style.borderLeftColor = 'rgba(0,183,229,0.9)';
+			nodes.timer.dataset.progress = Math.floor( time/5 ) * 25;
+			if(nodes.timer.dataset.progress == 100){
 				api.next();
 				time = 0;
 			}
