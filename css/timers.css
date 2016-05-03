@@ -15,6 +15,11 @@
 	height: 50px;
 	margin: 0 auto;
 	transform: rotate(45deg);
+	cursor: pointer;
+}
+
+#img-timer:hover {
+	box-shadow: 0 0 40px #1d6bb4;
 }
 
 #img-timer > span {
@@ -23,3 +28,26 @@
 	text-align: center;
 	transform: rotate(-45deg);
 }
+
+#img-timer.play-btn > span {
+	display: none;
+}
+
+.play-btn:after {
+	content: "";
+	width: 0;
+	height: 0;
+	border-top: 15px solid transparent;
+	border-bottom: 15px solid transparent;
+	border-left: 25px solid rgba(0,183,229,0.8);
+	transform: rotate(-45deg);
+	top: 13px;
+	left: 21px;
+	position: absolute;
+}
+
+.play-btn:hover:after {
+	border-left-color: rgba(0,183,229,1);
+}
+
+
