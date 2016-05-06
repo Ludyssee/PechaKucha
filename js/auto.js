@@ -16,7 +16,7 @@
 
 	// Slides creation
 	for (var i=0; i<images.length; i++) {
-		slide = '<div class="step slide" data-x="' + (size.w*2+200)*i + '" data-y="-'+ (size.h+200) +'">';
+		slide = '<div class="step slide" data-x="' + (size.w*2+200)*(i%4) + '" data-y="'+ (size.h+200)*Math.floor(i/4) +'">';
 		slide += '<img src="img/' + images[i] + '"/>';
 		slide += '</div>';
 		nodes.temp = document.createElement('div');
@@ -24,6 +24,15 @@
 		nodes.root.appendChild(nodes.temp.childNodes[0]);
 		delete nodes.temp;
 	}
+
+	// add a final overview
+	slide = '<div id="overview" class="step" data-x="' + (size.w*2+200)*1.5 + '" data-y="'+ (size.h+200)*2 +'" data-scale="10">';
+	slide += '<h1>Merci&nbsp;!</h1>';
+	slide += '</div>';
+	nodes.temp = document.createElement('div');
+	nodes.temp.innerHTML = slide;
+	nodes.root.appendChild(nodes.temp.childNodes[0]);
+	delete nodes.temp;
 
 	// wire up the play button
 	nodes.timer.addEventListener('click', function(){
