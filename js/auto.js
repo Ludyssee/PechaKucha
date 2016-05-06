@@ -39,6 +39,17 @@
 	// Launch impress
 	api.init();
 
+	// When slide is changed, restart the gif animation if needed
+	nodes.root.addEventListener('impress:stepleave', function(e){
+		// get the next slide
+		var next = nodes.root.querySelector('.active:not(.present)');
+		if( next && next.childNodes[0].src.substr(-3,3) == 'gif' ){
+			var src = next.childNodes[0].src;
+			next.childNodes[0].src = "";
+			next.childNodes[0].src = src;
+		}
+	});
+
 	function launchTimer(){
 		time = parseInt(nodes.timer.childNodes[0].innerHTML, 10);
 		timer = setInterval(function(){
