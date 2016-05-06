@@ -1,5 +1,5 @@
 (function(window, document){
-	var nbImg = 4, slide = '', time=0, timer;
+	var slide = '', time=0, timer;
 	var nodes = {
 		root : document.querySelector('#impress'),
 		body : document.querySelector('body'),
@@ -9,12 +9,15 @@
 		w : window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
 		h : window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
 	};
-	var api = impress()
+	var api = impress();
+
+	// image list
+	var images = ['ludyssee.jpg', 'dobble.gif', 'camemberts.jpg', 'boring-stunning.jpg', 'team.jpg', 'cadre.jpg', 'echecs2.jpg', 'soirees-jeux.jpg'];
 
 	// Slides creation
-	for (var i=0; i<nbImg; i++) {
+	for (var i=0; i<images.length; i++) {
 		slide = '<div class="step slide" data-x="' + (size.w*2+200)*i + '" data-y="-'+ (size.h+200) +'">';
-		slide += '<img src="img/' + (i+1) + '.jpg"/>';
+		slide += '<img src="img/' + images[i] + '"/>';
 		slide += '</div>';
 		nodes.temp = document.createElement('div');
 		nodes.temp.innerHTML = slide;
