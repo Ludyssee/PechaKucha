@@ -52,10 +52,17 @@
 	nodes.root.addEventListener('impress:stepleave', function(e){
 		// get the next slide
 		var next = nodes.root.querySelector('.active:not(.present)');
-		if( next && next.childNodes[0].src.substr(-3,3) == 'gif' ){
+		if( next && next.childNodes.length && next.childNodes[0].src.substr(-3,3) == 'gif' ){
 			var src = next.childNodes[0].src;
 			next.childNodes[0].src = "";
 			next.childNodes[0].src = src;
+		}
+	});
+	nodes.root.addEventListener('impress:stepenter', function(e){
+		if( e.target.childNodes.length && e.target.childNodes[0].src.substr(-3,3) == 'gif' ){
+			var src = e.target.childNodes[0].src;
+			e.target.childNodes[0].src = "";
+			e.target.childNodes[0].src = src;
 		}
 	});
 
