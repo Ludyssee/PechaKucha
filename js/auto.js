@@ -16,7 +16,7 @@
 
 	// Slides creation
 	for (var i=0; i<images.length; i++) {
-		slide = '<div class="step slide" data-x="' + (size.w*2+200)*(i%4) + '" data-y="'+ (size.h+200)*Math.floor(i/4) +'">';
+		slide = '<div class="step slide" data-x="' + (size.w*2+200)*(i%4) + '" data-y="'+ ((size.h*2)*Math.floor(i/4) - 400) +'">';
 		slide += '<img src="img/' + images[i] + '"/>';
 		slide += '</div>';
 		nodes.temp = document.createElement('div');
