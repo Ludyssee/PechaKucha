@@ -31,6 +31,7 @@
 		'panama-papers.jpg',
 		'coopaname-ceas.png',
 		'prospects.jpg',
+		'budget.jpg',
 		'we-need-you.jpg',
 	];
 
