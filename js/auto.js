@@ -12,7 +12,27 @@
 	var api = impress();
 
 	// image list
-	var images = ['ludyssee.jpg', 'dobble.gif', 'camemberts.jpg', 'boring-stunning.jpg', 'team.jpg', 'cadre.jpg', 'echecs2.jpg', 'soirees-jeux.jpg'];
+	var images = [
+		'ludyssee.jpg',
+		'dobble.png',
+		'dobble.gif',
+		'camemberts.jpg',
+		'boring-stunning.jpg',
+		'team.jpg',
+		'diverse-team.jpg',
+		'happy-project-team.jpg',
+		'cadre.jpg',
+		'echecs2.jpg',
+		'soirees-jeux.jpg',
+		'coopaname-5-avril.jpg',
+		'reseaux-pro.jpg',
+		'reaction-en-chaine.jpg',
+		'reaction-en-chaine2.jpg',
+		'panama-papers.jpg',
+		'coopaname-ceas.png',
+		'prospects.jpg',
+		'we-need-you.jpg',
+	];
 
 	// Slides creation
 	for (var i=0; i<images.length; i++) {
